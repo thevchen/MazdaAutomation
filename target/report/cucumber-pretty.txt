@@ -1,0 +1,21 @@
+@tag
+Feature: Mazda 3 page feature
+
+  Background:                        [90m# Mazda3Page.feature:3[0m
+    [32mGiven [0m[32mI am on "[0m[32m[1mcars/mazda3[0m[32m" page[0m [90m# StepDefs.i_am_on_page(String)[0m
+
+  @Test1
+  Scenario: Mazda3 page UI tests                         [90m# Mazda3Page.feature:7[0m
+    [33mThen [0m[33mColor radio buttons exists on the page[0m          [90m# StepDefs.color_radio_buttons_exists_on_the_page()[0m
+      [31mcucumber.api.PendingException: TODO: implement me
+      	at com.mazda.automation.StepDefs.StepDefs.color_radio_buttons_exists_on_the_page(StepDefs.java:64)
+      	at ✽.Then Color radio buttons exists on the page(Mazda3Page.feature:8)
+      [0m
+    [36mAnd [0m[36mModel image is present on the page[0m               [90m# StepDefs.model_image_is_present_on_the_page()[0m
+    [36mAnd [0m[36mModel body type exists on the page[0m               [90m# StepDefs.model_body_type_exists_on_the_page()[0m
+    [36mAnd [0m[36mTool tip text on the page is "[0m[36m[1mSample text[0m[36m"[0m       [90m# StepDefs.tool_tip_text_on_the_page_is(String)[0m
+    [36mAnd [0m[36mTotal number of color switch radio buttons are [0m[36m[1m8[0m [90m# StepDefs.total_number_of_color_switch_radio_buttons_are(int)[0m
+    [36mWhen [0m[36mI click on each color switch radio button[0m       [90m# StepDefs.i_click_on_each_color_switch_radio_button()[0m
+    [36mThen [0m[36mI see a model image for each color[0m              [90m# StepDefs.i_see_a_model_image_for_each_color()[0m
+    [36mWhen [0m[36mI click on body switch button "[0m[36m[1msedan[0m[36m"[0m           [90m# StepDefs.i_click_on_body_switch_button(String)[0m
+    [36mThen [0m[36mI see a model image for "[0m[36m[1msedan[0m[36m"[0m                 [90m# StepDefs.i_see_a_model_image_for(String)[0m

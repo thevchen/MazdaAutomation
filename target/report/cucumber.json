@@ -1,0 +1,208 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 33232802268,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I am on \"cars/mazda3\" page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "cars/mazda3",
+                  "offset": 9
+                }
+              ],
+              "location": "StepDefs.i_am_on_page(String)"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 16470570,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefs.before(Scenario)"
+            }
+          }
+        ],
+        "line": 7,
+        "name": "Mazda3 page UI tests",
+        "description": "",
+        "id": "mazda-3-page-feature;mazda3-page-ui-tests",
+        "after": [
+          {
+            "result": {
+              "duration": 1890066339,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefs.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2193310,
+              "error_message": "cucumber.api.PendingException: TODO: implement me\r\n\tat com.mazda.automation.StepDefs.StepDefs.color_radio_buttons_exists_on_the_page(StepDefs.java:64)\r\n\tat ✽.Then Color radio buttons exists on the page(Mazda3Page.feature:8)\r\n",
+              "status": "pending"
+            },
+            "line": 8,
+            "name": "Color radio buttons exists on the page",
+            "match": {
+              "location": "StepDefs.color_radio_buttons_exists_on_the_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "Model image is present on the page",
+            "match": {
+              "location": "StepDefs.model_image_is_present_on_the_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "Model body type exists on the page",
+            "match": {
+              "location": "StepDefs.model_body_type_exists_on_the_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "Tool tip text on the page is \"Sample text\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Sample text",
+                  "offset": 30
+                }
+              ],
+              "location": "StepDefs.tool_tip_text_on_the_page_is(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "Total number of color switch radio buttons are 8",
+            "match": {
+              "arguments": [
+                {
+                  "val": "8",
+                  "offset": 47
+                }
+              ],
+              "location": "StepDefs.total_number_of_color_switch_radio_buttons_are(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 13,
+            "name": "I click on each color switch radio button",
+            "match": {
+              "location": "StepDefs.i_click_on_each_color_switch_radio_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 14,
+            "name": "I see a model image for each color",
+            "match": {
+              "location": "StepDefs.i_see_a_model_image_for_each_color()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 15,
+            "name": "I click on body switch button \"sedan\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "sedan",
+                  "offset": 31
+                }
+              ],
+              "location": "StepDefs.i_click_on_body_switch_button(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 16,
+            "name": "I see a model image for \"sedan\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "sedan",
+                  "offset": 25
+                }
+              ],
+              "location": "StepDefs.i_see_a_model_image_for(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 6,
+            "name": "@Test1"
+          }
+        ]
+      }
+    ],
+    "name": "Mazda 3 page feature",
+    "description": "",
+    "id": "mazda-3-page-feature",
+    "keyword": "Feature",
+    "uri": "Mazda3Page.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@tag"
+      }
+    ]
+  }
+]

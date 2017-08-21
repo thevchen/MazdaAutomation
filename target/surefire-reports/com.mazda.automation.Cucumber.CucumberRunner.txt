@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.mazda.automation.Cucumber.CucumberRunner
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 10, Time elapsed: 40.06 sec

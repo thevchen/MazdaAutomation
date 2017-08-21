@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="1" tests="1" time="35.141532">
+<testcase classname="Mazda 3 page feature" name="Mazda3 page UI tests" time="35.141532">
+<skipped><![CDATA[Given I am on "cars/mazda3" page............................................passed
+Then Color radio buttons exists on the page.................................pending
+And Model image is present on the page......................................skipped
+And Model body type exists on the page......................................skipped
+And Tool tip text on the page is "Sample text"..............................skipped
+And Total number of color switch radio buttons are 8........................skipped
+When I click on each color switch radio button..............................skipped
+Then I see a model image for each color.....................................skipped
+When I click on body switch button "sedan"..................................skipped
+Then I see a model image for "sedan"........................................skipped
+]]></skipped>
+</testcase>
+</testsuite>

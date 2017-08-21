@@ -1,0 +1,20 @@
+[
+  {
+    "source": "^I am on \"(.*?)\" page$",
+    "steps": [
+      {
+        "name": "I am on \"cars/mazda3\" page",
+        "aggregatedDurations": {
+          "average": 33.232802268,
+          "median": 33.232802268
+        },
+        "durations": [
+          {
+            "duration": 33.232802268,
+            "location": "Mazda3Page.feature:4"
+          }
+        ]
+      }
+    ]
+  }
+]
