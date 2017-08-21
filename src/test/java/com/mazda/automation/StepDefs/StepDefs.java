@@ -6,8 +6,12 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+
+
+import static org.junit.Assert.assertTrue;
 import com.mazda.automation.baseClass.BaseClass;
 import com.mazda.automation.commUtils.CommonUtils;
+import com.mazda.automation.pageObjects.CarlinesLandingPage;
 
 import cucumber.api.PendingException;
 import cucumber.api.Scenario;
@@ -16,6 +20,7 @@ import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+
 
 public class StepDefs extends BaseClass{
 
@@ -61,54 +66,72 @@ public class StepDefs extends BaseClass{
 	@Then("^Color radio buttons exists on the page$")
 	public void color_radio_buttons_exists_on_the_page() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+		CarlinesLandingPage LandingPage = PageFactory.initElements(driver,CarlinesLandingPage.class);
+		Assert.assertTrue(LandingPage.verifyColourRadioButtons(),"verify Colour Radio Buttons test failed");
+		throw new PendingException();
 	}
 
 	@Then("^Model image is present on the page$")
 	public void model_image_is_present_on_the_page() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
+		CarlinesLandingPage LandingPage = PageFactory.initElements(driver,CarlinesLandingPage.class);
+		Assert.assertTrue(LandingPage.verifyModelImagePresense(),"Verify Model Image Presense test failed");
 	    throw new PendingException();
 	}
 
 	@Then("^Model body type exists on the page$")
 	public void model_body_type_exists_on_the_page() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
+		CarlinesLandingPage LandingPage = PageFactory.initElements(driver,CarlinesLandingPage.class);
+		Assert.assertTrue(LandingPage.verifyModelType(),"Verify Model Type test failed");
 	    throw new PendingException();
 	}
 
 	@Then("^Tool tip text on the page is \"(.*?)\"$")
 	public void tool_tip_text_on_the_page_is(String arg1) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
+		CarlinesLandingPage LandingPage = PageFactory.initElements(driver,CarlinesLandingPage.class);
+		Assert.assertTrue(LandingPage.verifyModelToolTips(),"Verify Model Tool Tips test failed");
 	    throw new PendingException();
 	}
 
 	@Then("^Total number of color switch radio buttons are (\\d+)$")
 	public void total_number_of_color_switch_radio_buttons_are(int arg1) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
+		CarlinesLandingPage LandingPage = PageFactory.initElements(driver,CarlinesLandingPage.class);
+		Assert.assertTrue(LandingPage.verifyNumberOfColourRadioButtons(),"Verify Number Of Colour Radio Buttons test failed");
 	    throw new PendingException();
 	}
 
 	@When("^I click on each color switch radio button$")
 	public void i_click_on_each_color_switch_radio_button() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
+		CarlinesLandingPage LandingPage = PageFactory.initElements(driver,CarlinesLandingPage.class);
+		Assert.assertTrue(LandingPage.verifyModelColourSwitching(),"Verify Model Colour Switching test failed");
 	    throw new PendingException();
 	}
 
 	@Then("^I see a model image for each color$")
 	public void i_see_a_model_image_for_each_color() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
+		CarlinesLandingPage LandingPage = PageFactory.initElements(driver,CarlinesLandingPage.class);
+		Assert.assertTrue(LandingPage.verifyModelImageChangesWithColourType(),"Verify Model Image Changes with Colour Type test failed");
 	    throw new PendingException();
 	}
 
 	@When("^I click on body switch button \"(.*?)\"$")
 	public void i_click_on_body_switch_button(String arg1) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
+		CarlinesLandingPage LandingPage = PageFactory.initElements(driver,CarlinesLandingPage.class);
+		Assert.assertTrue(LandingPage.verifyBodyTypeswitch(),"Verify Body Type switch test failed");
 	    throw new PendingException();
 	}
 
 	@Then("^I see a model image for \"(.*?)\"$")
 	public void i_see_a_model_image_for(String arg1) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
+		CarlinesLandingPage LandingPage = PageFactory.initElements(driver,CarlinesLandingPage.class);
+		Assert.assertTrue(LandingPage.verifyModelImageChangesWithBodyType(),"Verify Model Image Changes With BodyType test failed");
 	    throw new PendingException();
 	}
 
