@@ -2,13 +2,11 @@ package com.mazda.automation.StepDefs;
 
 import java.io.IOException;
 
+import org.junit.Assert;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-
-
-import static org.junit.Assert.assertTrue;
 import com.mazda.automation.baseClass.BaseClass;
 import com.mazda.automation.commUtils.CommonUtils;
 import com.mazda.automation.pageObjects.CarlinesLandingPage;
@@ -67,7 +65,7 @@ public class StepDefs extends BaseClass{
 	public void color_radio_buttons_exists_on_the_page() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		CarlinesLandingPage LandingPage = PageFactory.initElements(driver,CarlinesLandingPage.class);
-		Assert.assertTrue(LandingPage.verifyColourRadioButtons(),"verify Colour Radio Buttons test failed");
+		Assert.assertTrue("Verify Colour Radio Buttons test failed", LandingPage.verifyColourRadioButtons());
 		throw new PendingException();
 	}
 
@@ -75,7 +73,7 @@ public class StepDefs extends BaseClass{
 	public void model_image_is_present_on_the_page() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		CarlinesLandingPage LandingPage = PageFactory.initElements(driver,CarlinesLandingPage.class);
-		Assert.assertTrue(LandingPage.verifyModelImagePresense(),"Verify Model Image Presense test failed");
+		Assert.assertTrue("Verify Model Image Presense test failed", LandingPage.verifyModelImagePresense());
 	    throw new PendingException();
 	}
 
@@ -83,7 +81,7 @@ public class StepDefs extends BaseClass{
 	public void model_body_type_exists_on_the_page() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		CarlinesLandingPage LandingPage = PageFactory.initElements(driver,CarlinesLandingPage.class);
-		Assert.assertTrue(LandingPage.verifyModelType(),"Verify Model Type test failed");
+		Assert.assertTrue("Verify Model Type test failed",LandingPage.verifyModelType());
 	    throw new PendingException();
 	}
 
@@ -91,7 +89,7 @@ public class StepDefs extends BaseClass{
 	public void tool_tip_text_on_the_page_is(String arg1) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		CarlinesLandingPage LandingPage = PageFactory.initElements(driver,CarlinesLandingPage.class);
-		Assert.assertTrue(LandingPage.verifyModelToolTips(),"Verify Model Tool Tips test failed");
+		Assert.assertTrue("Verify Model Tool Tips test failed",LandingPage.verifyModelToolTips());
 	    throw new PendingException();
 	}
 
@@ -99,7 +97,7 @@ public class StepDefs extends BaseClass{
 	public void total_number_of_color_switch_radio_buttons_are(int arg1) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		CarlinesLandingPage LandingPage = PageFactory.initElements(driver,CarlinesLandingPage.class);
-		Assert.assertTrue(LandingPage.verifyNumberOfColourRadioButtons(),"Verify Number Of Colour Radio Buttons test failed");
+		Assert.assertTrue("Verify Number Of Colour Radio Buttons test failed",LandingPage.verifyNumberOfColourRadioButtons());
 	    throw new PendingException();
 	}
 
@@ -107,7 +105,7 @@ public class StepDefs extends BaseClass{
 	public void i_click_on_each_color_switch_radio_button() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		CarlinesLandingPage LandingPage = PageFactory.initElements(driver,CarlinesLandingPage.class);
-		Assert.assertTrue(LandingPage.verifyModelColourSwitching(),"Verify Model Colour Switching test failed");
+		Assert.assertTrue("Verify Model Colour Switching test failed",LandingPage.verifyModelColourSwitching());
 	    throw new PendingException();
 	}
 
@@ -115,7 +113,7 @@ public class StepDefs extends BaseClass{
 	public void i_see_a_model_image_for_each_color() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		CarlinesLandingPage LandingPage = PageFactory.initElements(driver,CarlinesLandingPage.class);
-		Assert.assertTrue(LandingPage.verifyModelImageChangesWithColourType(),"Verify Model Image Changes with Colour Type test failed");
+		Assert.assertTrue("Verify Model Image Changes with Colour Type test failed", LandingPage.verifyModelImageChangesWithColourType());
 	    throw new PendingException();
 	}
 
@@ -123,7 +121,7 @@ public class StepDefs extends BaseClass{
 	public void i_click_on_body_switch_button(String arg1) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		CarlinesLandingPage LandingPage = PageFactory.initElements(driver,CarlinesLandingPage.class);
-		Assert.assertTrue(LandingPage.verifyBodyTypeswitch(),"Verify Body Type switch test failed");
+		Assert.assertTrue("Verify Body Type switch test failed", LandingPage.verifyBodyTypeswitch());
 	    throw new PendingException();
 	}
 
@@ -131,7 +129,7 @@ public class StepDefs extends BaseClass{
 	public void i_see_a_model_image_for(String arg1) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		CarlinesLandingPage LandingPage = PageFactory.initElements(driver,CarlinesLandingPage.class);
-		Assert.assertTrue(LandingPage.verifyModelImageChangesWithBodyType(),"Verify Model Image Changes With BodyType test failed");
+		Assert.assertTrue("Verify Model Image Changes With BodyType test failed",LandingPage.verifyModelImageChangesWithBodyType());
 	    throw new PendingException();
 	}
 
