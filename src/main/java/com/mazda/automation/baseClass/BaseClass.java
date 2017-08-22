@@ -170,7 +170,7 @@ public abstract class BaseClass {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("Webdriver exception. Trying to press enter on the element: " + eleName);
+			System.out.println("Exception. Trying to press enter on the element: " + eleName);
 			try {
 				aobj.moveToElement(ele).click().build().perform();
 				ele.sendKeys(Keys.RETURN);

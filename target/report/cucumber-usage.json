@@ -1,16 +1,160 @@
 [
   {
+    "source": "^Total number of color switch radio buttons are (\\d+)$",
+    "steps": [
+      {
+        "name": "Total number of color switch radio buttons are 8",
+        "aggregatedDurations": {
+          "average": 0.049050696,
+          "median": 0.049050696
+        },
+        "durations": [
+          {
+            "duration": 0.049050696,
+            "location": "Mazda3Page.feature:21"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Color radio buttons exists on the page$",
+    "steps": [
+      {
+        "name": "Color radio buttons exists on the page",
+        "aggregatedDurations": {
+          "average": 0.094389502,
+          "median": 0.094389502
+        },
+        "durations": [
+          {
+            "duration": 0.094389502,
+            "location": "Mazda3Page.feature:8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Tool tip text on the page is:$",
+    "steps": [
+      {
+        "name": "Tool tip text on the page is:",
+        "aggregatedDurations": {
+          "average": 0.383898745,
+          "median": 0.383898745
+        },
+        "durations": [
+          {
+            "duration": 0.383898745,
+            "location": "Mazda3Page.feature:11"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I see a model image for \"(.*?)\"$",
+    "steps": [
+      {
+        "name": "I see a model image for \"sedan\"",
+        "aggregatedDurations": {
+          "average": 0.032135663,
+          "median": 0.032135663
+        },
+        "durations": [
+          {
+            "duration": 0.032135663,
+            "location": "Mazda3Page.feature:24"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I click on body switch button \"(.*?)\"$",
+    "steps": [
+      {
+        "name": "I click on body switch button \"sedan\"",
+        "aggregatedDurations": {
+          "average": 0.19766871,
+          "median": 0.19766871
+        },
+        "durations": [
+          {
+            "duration": 0.19766871,
+            "location": "Mazda3Page.feature:23"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Model image is present on the page$",
+    "steps": [
+      {
+        "name": "Model image is present on the page",
+        "aggregatedDurations": {
+          "average": 0.077127733,
+          "median": 0.077127733
+        },
+        "durations": [
+          {
+            "duration": 0.077127733,
+            "location": "Mazda3Page.feature:9"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Model body type exists on the page$",
+    "steps": [
+      {
+        "name": "Model body type exists on the page",
+        "aggregatedDurations": {
+          "average": 0.097160256,
+          "median": 0.097160256
+        },
+        "durations": [
+          {
+            "duration": 0.097160256,
+            "location": "Mazda3Page.feature:10"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I see corresponding model image upon clicking each color$",
+    "steps": [
+      {
+        "name": "I see corresponding model image upon clicking each color",
+        "aggregatedDurations": {
+          "average": 6.671023684,
+          "median": 6.671023684
+        },
+        "durations": [
+          {
+            "duration": 6.671023684,
+            "location": "Mazda3Page.feature:22"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "source": "^I am on \"(.*?)\" page$",
     "steps": [
       {
         "name": "I am on \"cars/mazda3\" page",
         "aggregatedDurations": {
-          "average": 33.232802268,
-          "median": 33.232802268
+          "average": 20.359030232,
+          "median": 20.359030232
         },
         "durations": [
           {
-            "duration": 33.232802268,
+            "duration": 20.359030232,
             "location": "Mazda3Page.feature:4"
           }
         ]

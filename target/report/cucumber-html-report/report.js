@@ -13,7 +13,7 @@ formatter.feature({
   ]
 });
 formatter.before({
-  "duration": 16470570,
+  "duration": 18606760,
   "status": "passed"
 });
 formatter.background({
@@ -38,7 +38,7 @@ formatter.match({
   "location": "StepDefs.i_am_on_page(String)"
 });
 formatter.result({
-  "duration": 33232802268,
+  "duration": 20359030232,
   "status": "passed"
 });
 formatter.scenario({
@@ -72,31 +72,91 @@ formatter.step({
 });
 formatter.step({
   "line": 11,
-  "name": "Tool tip text on the page is \"Sample text\"",
+  "name": "Tool tip text on the page is:",
+  "rows": [
+    {
+      "cells": [
+        "Radio-button",
+        "ToolTip-Text"
+      ],
+      "line": 12
+    },
+    {
+      "cells": [
+        "Gray",
+        "Machine Grey Metallic"
+      ],
+      "line": 13
+    },
+    {
+      "cells": [
+        "Black",
+        "Jet Black Mica"
+      ],
+      "line": 14
+    },
+    {
+      "cells": [
+        "Red",
+        "Soul Red Metallic"
+      ],
+      "line": 15
+    },
+    {
+      "cells": [
+        "Crystal-Blue",
+        "Deep Crystal Blue Mica"
+      ],
+      "line": 16
+    },
+    {
+      "cells": [
+        "Silver",
+        "Sonic Silver Metallic"
+      ],
+      "line": 17
+    },
+    {
+      "cells": [
+        "Titanium",
+        "Titanium Flash Mica"
+      ],
+      "line": 18
+    },
+    {
+      "cells": [
+        "White",
+        "Snowflake White Pearl Mica"
+      ],
+      "line": 19
+    },
+    {
+      "cells": [
+        "Eternal-Blue",
+        "Eternal Blue Mica"
+      ],
+      "line": 20
+    }
+  ],
   "keyword": "And "
 });
 formatter.step({
-  "line": 12,
+  "line": 21,
   "name": "Total number of color switch radio buttons are 8",
   "keyword": "And "
 });
 formatter.step({
-  "line": 13,
-  "name": "I click on each color switch radio button",
-  "keyword": "When "
+  "line": 22,
+  "name": "I see corresponding model image upon clicking each color",
+  "keyword": "And "
 });
 formatter.step({
-  "line": 14,
-  "name": "I see a model image for each color",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 15,
+  "line": 23,
   "name": "I click on body switch button \"sedan\"",
   "keyword": "When "
 });
 formatter.step({
-  "line": 16,
+  "line": 24,
   "name": "I see a model image for \"sedan\"",
   "keyword": "Then "
 });
@@ -104,33 +164,29 @@ formatter.match({
   "location": "StepDefs.color_radio_buttons_exists_on_the_page()"
 });
 formatter.result({
-  "duration": 2193310,
-  "error_message": "cucumber.api.PendingException: TODO: implement me\r\n\tat com.mazda.automation.StepDefs.StepDefs.color_radio_buttons_exists_on_the_page(StepDefs.java:64)\r\n\tat ✽.Then Color radio buttons exists on the page(Mazda3Page.feature:8)\r\n",
-  "status": "pending"
+  "duration": 94389502,
+  "status": "passed"
 });
 formatter.match({
   "location": "StepDefs.model_image_is_present_on_the_page()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 77127733,
+  "status": "passed"
 });
 formatter.match({
   "location": "StepDefs.model_body_type_exists_on_the_page()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 97160256,
+  "status": "passed"
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "Sample text",
-      "offset": 30
-    }
-  ],
-  "location": "StepDefs.tool_tip_text_on_the_page_is(String)"
+  "location": "StepDefs.tool_tip_text_on_the_page_is(DataTable)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 383898745,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -142,19 +198,15 @@ formatter.match({
   "location": "StepDefs.total_number_of_color_switch_radio_buttons_are(int)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 49050696,
+  "status": "passed"
 });
 formatter.match({
   "location": "StepDefs.i_click_on_each_color_switch_radio_button()"
 });
 formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "StepDefs.i_see_a_model_image_for_each_color()"
-});
-formatter.result({
-  "status": "skipped"
+  "duration": 6671023684,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -166,7 +218,8 @@ formatter.match({
   "location": "StepDefs.i_click_on_body_switch_button(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 197668710,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -178,10 +231,11 @@ formatter.match({
   "location": "StepDefs.i_see_a_model_image_for(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 32135663,
+  "status": "passed"
 });
 formatter.after({
-  "duration": 1890066339,
+  "duration": 1071408172,
   "status": "passed"
 });
 });
