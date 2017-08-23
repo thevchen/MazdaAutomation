@@ -11,6 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.mazda.automation.baseClass.BaseClass;
 import com.mazda.automation.commUtils.CommonUtils;
 import com.mazda.automation.pageObjects.CarlinesLandingPage;
+import com.mazda.automation.pageObjects.CompareOurRange;
 
 import cucumber.api.DataTable;
 import cucumber.api.Scenario;
@@ -200,5 +201,43 @@ public class StepDefs extends BaseClass {
 		Assert.assertTrue("Correct model image for body type is not showing for body type: "+arg1, modelImageSrc.toLowerCase().contains(arg1.toLowerCase()));
 		
 	}
+	
+	
+//Test case 2
+	
+	@When("^I click on the compare our range$")
+	public void i_click_on_the_compare_our_range() throws Throwable {
+		CarlinesLandingPage LandingPage = PageFactory.initElements(driver, CarlinesLandingPage.class);
+		LandingPage.compareRangeButton.click();
+	 //   throw new PendingException();
+	}
+
+	@Then("^Model ranges Page loads$")
+	public void model_ranges_Page_loads() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		//CompareOurRange CompareRangePage = PageFactory.initElements(driver, CompareOurRange.class);
+		//    throw new PendingException();
+	}
+
+	@When("^I select any two models to compare$")
+	public void i_select_any_two_models_to_compare() throws Throwable {
+		CompareOurRange CompareRangePage = PageFactory.initElements(driver, CompareOurRange.class);
+		
+	  //  throw new PendingException();
+	}
+
+	@When("^select any options from drop down$")
+	public void select_any_options_from_drop_down() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	  //  throw new PendingException();
+	}
+
+	@Then("^I see message \"(.*?)\"$")
+	public void i_see_message(String arg1) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	//    throw new PendingException();
+	}
+	//==================
+	
 
 }

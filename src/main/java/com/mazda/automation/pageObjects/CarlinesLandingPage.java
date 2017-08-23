@@ -92,7 +92,10 @@ public class CarlinesLandingPage extends BaseClass{
 	@FindBy(xpath="//label[@data-reactid=17]")
 	public WebElement sedanBodySwitch;
 	
+	@FindBy(xpath="//a[contains(.,'Compare our range')]")
+	public WebElement compareRangeButton;
 	
+
 	
 	
 	
@@ -114,146 +117,6 @@ public class CarlinesLandingPage extends BaseClass{
 //			return false;
 //		}
 //	}
-	
-	
-	
-	// Method to check Model Image Presense
-//	public boolean verifyModelImagePresense ()
-//	{
-//		try{
-//			// need to write code to check Colour radio buttons exists
-//			
-//			return true;
-//		}
-//		catch (Exception e)
-//		{
-//			System.out.println("!!!!Unable to find !!!!");
-//			e.printStackTrace();
-//			return false;
-//		}
-//	}
-	
-	
-
-	// Method to check Model Type Presense
-//	public boolean verifyModelType()
-//	{
-//		try{
-//			// need to write code to check Colour radio buttons exists
-//			
-//			return true;
-//		}
-//		catch (Exception e)
-//		{
-//			System.out.println("!!!!Unable to find !!!!");
-//			e.printStackTrace();
-//			return false;
-//		}
-//	}
-	
-	
-	
-	// Method to check Model Tool tips
-//	public boolean verifyModelToolTips()
-//	{
-//		try{
-//			// need to write code to check Colour radio buttons exists
-//			
-//			return true;
-//		}
-//		catch (Exception e)
-//		{
-//			System.out.println("!!!!Unable to find !!!!");
-//			e.printStackTrace();
-//			return false;
-//		}
-//	}
-	
-	
-	
-	// Method to check Number of Model Colour options
-//	public boolean verifyNumberOfColourRadioButtons()
-//	{
-//		try{
-//			// need to write code to check Colour radio buttons exists
-//			
-//			return true;
-//		}
-//		catch (Exception e)
-//		{
-//			System.out.println("!!!!Unable to find !!!!");
-//			e.printStackTrace();
-//			return false;
-//		}
-//	}
-	
-	
-	
-	// Method to check Model Colour switching
-//	public boolean verifyModelColourSwitching()
-//	{
-//		try{
-//			// need to write code to check Colour radio buttons exists
-//			
-//			return true;
-//		}
-//		catch (Exception e)
-//		{
-//			System.out.println("!!!!Unable to find !!!!");
-//			e.printStackTrace();
-//			return false;
-//		}
-//	}
-//	
-//	
-//	// Method to check Model Image changes with colour selection
-//		public boolean verifyModelImageChangesWithColourType()
-//		{
-//			try{
-//				// need to write code to check Colour radio buttons exists
-//				
-//				return true;
-//			}
-//			catch (Exception e)
-//			{
-//				System.out.println("!!!!Unable to find !!!!");
-//				e.printStackTrace();
-//				return false;
-//			}
-//		}
-//		
-//		
-//		// Method to check Model body Type can be change
-//		public boolean verifyBodyTypeswitch()
-//		{
-//			try{
-//				// need to write code to check Colour radio buttons exists
-//				
-//				return true;
-//			}
-//			catch (Exception e)
-//			{
-//				System.out.println("!!!!Unable to find !!!!");
-//				e.printStackTrace();
-//				return false;
-//			}
-//		}
-//		
-//		
-//		// Method to check Model Image changes with Body Type
-//		public boolean verifyModelImageChangesWithBodyType()
-//		{
-//			try{
-//				// need to write code to check Colour radio buttons exists
-//				
-//				return true;
-//			}
-//			catch (Exception e)
-//			{
-//				System.out.println("!!!!Unable to find !!!!");
-//				e.printStackTrace();
-//				return false;
-//			}
-//		}
+		
 
 }

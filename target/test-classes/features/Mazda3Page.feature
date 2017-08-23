@@ -5,7 +5,7 @@ Feature: Mazda 3 page feature
 
 @Test1	
 Scenario: Mazda3 page UI tests
-	Then Color radio buttons exists on the page
+   	Then Color radio buttons exists on the page
 	And Model image is present on the page
 	And Model body type exists on the page
 	And Tool tip text on the page is:
@@ -22,3 +22,11 @@ Scenario: Mazda3 page UI tests
 	And I see corresponding model image upon clicking each color
 	When I click on body switch button "sedan"
 	Then I see a model image for "sedan"
+
+@Test2	
+Scenario: Mazda3 page UI tests Compare Ranges
+	When I click on the compare our range
+	Then Model ranges Page loads
+	When I select models "Mazda2" and "Mazda3" to compare
+	And  select any options from drop down
+	Then I see message "YOUR PRICE IS ON ITS WAY."
