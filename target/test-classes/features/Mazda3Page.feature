@@ -28,5 +28,6 @@ Scenario: Mazda3 page UI tests Compare models
     When I click on the compare our range 
 	Then Model ranges Page loads
 	When I select models "Mazda2" and "Mazda3" to compare
+	When I click on the Compare Cars button
 	And  select any options from drop down
 	Then I see message "YOUR PRICE IS ON ITS WAY."

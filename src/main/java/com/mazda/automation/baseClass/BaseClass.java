@@ -37,7 +37,7 @@ import com.assertthat.selenium_shutterbug.utils.web.ScrollStrategy;
  * Super class containing all common methods 
  * 
  * 
- * @author gagan_000
+ * @author Thev
  * 
  */
 public abstract class BaseClass {

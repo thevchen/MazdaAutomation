@@ -25,12 +25,21 @@ public class CompareOurRange extends BaseClass{
 	@FindBy(xpath="//h2[contains(.,'Compare our range')]")
 	public WebElement compareOurRangeTitle;
 	
-	@FindBy(xpath="//img[@alt='Mazda2']")
+	@FindBy(xpath="//img[@data-reactid='20']")
 	public WebElement compareOurRangeModelMazda2;
-
-	@FindBy(xpath="//img[@alt='Mazda3']")
+	
+	
+	@FindBy(xpath="//img[@data-reactid='28']")
 	public WebElement compareOurRangeModelMazda3;
 	
+	@FindBy(xpath="//a[contains(.,'Compare Cars')]")
+	public WebElement compareCarButton;
+	
+	@FindBy(xpath="//div[(@data-test='selection-left' and 'select-grade')]")
+	public WebElement modelGradeSelectionLeft;
+			
+	@FindBy(xpath="//div[(@data-test='selection-right' and 'select-grade')]")
+	public WebElement modelGradeSelectionRight;
 	
 	
 	//img[contains(@alt,'Mazda2')]

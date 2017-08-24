@@ -32,7 +32,7 @@ public class StepDefs extends BaseClass {
 		this.scenario = scenario;
 	}
 
-	@After()
+	//@After()
 	public void afterScenario(Scenario scenario) throws IOException, InterruptedException {
 		if (scenario.isFailed()) {
 			try {
@@ -49,8 +49,8 @@ public class StepDefs extends BaseClass {
 			}
 		}
 		if (driver != null) {
-			driver.close();
-			driver.quit();
+		//	driver.close();
+		//	driver.quit();
 			System.out.println("Browser Closed ++++++++++++++++++++++");
 
 		}
@@ -222,14 +222,29 @@ public class StepDefs extends BaseClass {
 	@When("^I select models \"(.*?)\" and \"(.*?)\" to compare$")
 	public void i_select_models_and_to_compare(String arg1, String arg2) throws Throwable {
 		CompareOurRange CompareRangePage = PageFactory.initElements(driver, CompareOurRange.class);
-		CompareRangePage.compareOurRangeModelMazda2.click();
-		CompareRangePage.compareOurRangeModelMazda3.click();
+	    // didnt use reacID
+		
+		//driver.navigate().to("https://www.mazda.com.au/compare/?cars="+arg1+","+arg2);
+		Assert.assertTrue("Model range   "+arg1+"  Page is not loading properly : ", BaseClass.waitAndClick(CompareRangePage.compareOurRangeModelMazda2, 10, driver, arg1));
+		Assert.assertTrue("Model range   "+arg2+"  Page is not loading properly : ", BaseClass.waitAndClick(CompareRangePage.compareOurRangeModelMazda3, 10, driver, arg1));
+		
 	}
 
+	
+	@When("^I click on the Compare Cars button$")
+	public void i_click_on_the_Compare_Cars_button() throws Throwable {
+		CompareOurRange CompareRangePage = PageFactory.initElements(driver, CompareOurRange.class);
+		Assert.assertTrue("Model range compare care button is not loading properly : ", BaseClass.waitAndClick(CompareRangePage.compareCarButton, 10, driver, "Compare Car Button"));
+	}
+	
+	
 	@When("^select any options from drop down$")
 	public void select_any_options_from_drop_down() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	  //  throw new PendingException();
+		CompareOurRange CompareRangePage = PageFactory.initElements(driver, CompareOurRange.class);
+		Assert.assertTrue("Model Grade Selection Left Dropdown is not loading properly : ", BaseClass.waitAndClick(CompareRangePage.modelGradeSelectionLeft, 10, driver, "Model Grade Selection Left Dropdown"));
+		driver.findElement(By.name("Neo")).click();
+		//driver.findElement(By.xpath("//*[(@alt='Neo')]")).click();
+		Assert.assertTrue("Model Grade Selection Right Dropdown is not loading properly : ", BaseClass.waitAndClick(CompareRangePage.modelGradeSelectionRight, 10, driver, "Model Grade Selection Right Dropdown"));
 	}
 
 	@Then("^I see message \"(.*?)\"$")
