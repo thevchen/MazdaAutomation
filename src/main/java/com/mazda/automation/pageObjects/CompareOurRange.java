@@ -25,6 +25,13 @@ public class CompareOurRange extends BaseClass{
 	@FindBy(xpath="//h2[contains(.,'Compare our range')]")
 	public WebElement compareOurRangeTitle;
 	
+	@FindBy(xpath="//img[@alt='Mazda2']")
+	public WebElement compareOurRangeModelMazda2;
+
+	@FindBy(xpath="//img[@alt='Mazda3']")
+	public WebElement compareOurRangeModelMazda3;
+	
+	
 	
 	//img[contains(@alt,'Mazda2')]
 	

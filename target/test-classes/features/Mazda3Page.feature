@@ -24,8 +24,8 @@ Scenario: Mazda3 page UI tests
 	Then I see a model image for "sedan"
 
 @Test2	
-Scenario: Mazda3 page UI tests Compare Ranges
-	When I click on the compare our range
+Scenario: Mazda3 page UI tests Compare models
+    When I click on the compare our range 
 	Then Model ranges Page loads
 	When I select models "Mazda2" and "Mazda3" to compare
 	And  select any options from drop down

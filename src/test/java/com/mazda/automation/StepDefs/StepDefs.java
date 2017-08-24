@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Map;
 
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -209,21 +210,20 @@ public class StepDefs extends BaseClass {
 	public void i_click_on_the_compare_our_range() throws Throwable {
 		CarlinesLandingPage LandingPage = PageFactory.initElements(driver, CarlinesLandingPage.class);
 		LandingPage.compareRangeButton.click();
-	 //   throw new PendingException();
+	 
 	}
 
 	@Then("^Model ranges Page loads$")
 	public void model_ranges_Page_loads() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-		//CompareOurRange CompareRangePage = PageFactory.initElements(driver, CompareOurRange.class);
-		//    throw new PendingException();
+	   	CompareOurRange CompareRangePage = PageFactory.initElements(driver, CompareOurRange.class);
+	    Assert.assertTrue("Model ranges Page is not loading properly : ", driver.getTitle().toLowerCase().contains("Compare Our Range".toLowerCase()));
 	}
 
-	@When("^I select any two models to compare$")
-	public void i_select_any_two_models_to_compare() throws Throwable {
+	@When("^I select models \"(.*?)\" and \"(.*?)\" to compare$")
+	public void i_select_models_and_to_compare(String arg1, String arg2) throws Throwable {
 		CompareOurRange CompareRangePage = PageFactory.initElements(driver, CompareOurRange.class);
-		
-	  //  throw new PendingException();
+		CompareRangePage.compareOurRangeModelMazda2.click();
+		CompareRangePage.compareOurRangeModelMazda3.click();
 	}
 
 	@When("^select any options from drop down$")
