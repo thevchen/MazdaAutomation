@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -13,6 +14,7 @@ import com.mazda.automation.baseClass.BaseClass;
 import com.mazda.automation.commUtils.CommonUtils;
 import com.mazda.automation.pageObjects.CarlinesLandingPage;
 import com.mazda.automation.pageObjects.CompareOurRange;
+import com.mazda.automation.commUtils.CommonUtils;
 
 import cucumber.api.DataTable;
 import cucumber.api.Scenario;
@@ -26,7 +28,7 @@ public class StepDefs extends BaseClass {
 
 	static WebDriver driver;
 	private Scenario scenario;
-
+	
 	@Before
 	public void before(Scenario scenario) {
 		this.scenario = scenario;
@@ -222,9 +224,6 @@ public class StepDefs extends BaseClass {
 	@When("^I select models \"(.*?)\" and \"(.*?)\" to compare$")
 	public void i_select_models_and_to_compare(String arg1, String arg2) throws Throwable {
 		CompareOurRange CompareRangePage = PageFactory.initElements(driver, CompareOurRange.class);
-	    // didnt use reacID
-		
-		//driver.navigate().to("https://www.mazda.com.au/compare/?cars="+arg1+","+arg2);
 		Assert.assertTrue("Model range   "+arg1+"  Page is not loading properly : ", BaseClass.waitAndClick(CompareRangePage.compareOurRangeModelMazda2, 10, driver, arg1));
 		Assert.assertTrue("Model range   "+arg2+"  Page is not loading properly : ", BaseClass.waitAndClick(CompareRangePage.compareOurRangeModelMazda3, 10, driver, arg1));
 		
@@ -242,17 +241,20 @@ public class StepDefs extends BaseClass {
 	public void select_any_options_from_drop_down() throws Throwable {
 		CompareOurRange CompareRangePage = PageFactory.initElements(driver, CompareOurRange.class);
 		Assert.assertTrue("Model Grade Selection Left Dropdown is not loading properly : ", BaseClass.waitAndClick(CompareRangePage.modelGradeSelectionLeft, 10, driver, "Model Grade Selection Left Dropdown"));
-		driver.findElement(By.name("Neo")).click();
-		//driver.findElement(By.xpath("//*[(@alt='Neo')]")).click();
+		// React Component re load the new DOM and object changes, thus using Key press event
+		CompareRangePage.enterKey();
 		Assert.assertTrue("Model Grade Selection Right Dropdown is not loading properly : ", BaseClass.waitAndClick(CompareRangePage.modelGradeSelectionRight, 10, driver, "Model Grade Selection Right Dropdown"));
+		CompareRangePage.enterKey();
+		
 	}
 
 	@Then("^I see message \"(.*?)\"$")
 	public void i_see_message(String arg1) throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	//    throw new PendingException();
+	  	CompareOurRange CompareRangePage = PageFactory.initElements(driver, CompareOurRange.class);
+	  	System.out.println(CompareRangePage.modelPricelabel.getText().toLowerCase());
+		Assert.assertTrue("Model ranges Page Your price is on its way Verification failed : ", CompareRangePage.modelPricelabel.getText().toLowerCase().contains("your price is on its way.".toLowerCase()));
+
 	}
-	//==================
-	
+		
 
 }

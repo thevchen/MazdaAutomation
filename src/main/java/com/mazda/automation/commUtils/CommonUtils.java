@@ -11,12 +11,14 @@ import com.mazda.automation.baseClass.BaseClass;
 
 
 
+
 public class CommonUtils extends BaseClass{
 	
 	//String baseURL = System.getProperty("webdriver.base.url");
 	String browserName = System.getProperty("webdriver.browser.name");
 	
 	String baseURL = "https://www.mazda.com.au/";
+	
 //	String browserName = "chrome";
 	
 	

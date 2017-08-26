@@ -290,6 +290,14 @@ public abstract class BaseClass {
 		return true;
 	}
 	
+	public boolean enterKey() throws AWTException, InterruptedException {
+		Robot robj = new Robot();
+		robj.keyPress(KeyEvent.VK_ENTER);
+		robj.keyRelease(KeyEvent.VK_ENTER);
+		return true;
+	}
+	
+	
 	/**
 	 * @param ch
 	 * @throws AWTException

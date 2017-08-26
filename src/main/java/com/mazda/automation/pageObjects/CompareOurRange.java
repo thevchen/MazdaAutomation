@@ -41,6 +41,11 @@ public class CompareOurRange extends BaseClass{
 	@FindBy(xpath="//div[(@data-test='selection-right' and 'select-grade')]")
 	public WebElement modelGradeSelectionRight;
 	
+	@FindBy(xpath="//div[contains(.,'Your price is on its way.')]")
+	public WebElement modelPricelabel;
+	
+	
+	
 	
 	//img[contains(@alt,'Mazda2')]
 	
