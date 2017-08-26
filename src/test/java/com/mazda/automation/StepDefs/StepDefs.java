@@ -14,6 +14,7 @@ import com.mazda.automation.baseClass.BaseClass;
 import com.mazda.automation.commUtils.CommonUtils;
 import com.mazda.automation.pageObjects.CarlinesLandingPage;
 import com.mazda.automation.pageObjects.CompareOurRange;
+import com.mazda.automation.pageObjects.HomePage;
 import com.mazda.automation.commUtils.CommonUtils;
 
 import cucumber.api.DataTable;
@@ -63,7 +64,7 @@ public class StepDefs extends BaseClass {
 		CommonUtils page = PageFactory.initElements(driver, CommonUtils.class);
 		
 		driver = page.launchBrowser(driver, arg1);
-		
+		driver.manage().deleteAllCookies();
 		//closing location popup
 		CarlinesLandingPage LandingPage = PageFactory.initElements(driver, CarlinesLandingPage.class);
 		boolean isDisplayed = waitForElementToBeDisplayed(LandingPage.locationPopUP, 3, driver);
@@ -252,9 +253,48 @@ public class StepDefs extends BaseClass {
 	public void i_see_message(String arg1) throws Throwable {
 	  	CompareOurRange CompareRangePage = PageFactory.initElements(driver, CompareOurRange.class);
 	  	System.out.println(CompareRangePage.modelPricelabel.getText().toLowerCase());
-		Assert.assertTrue("Model ranges Page Your price is on its way Verification failed : ", CompareRangePage.modelPricelabel.getText().toLowerCase().contains("your price is on its way.".toLowerCase()));
+		Assert.assertTrue("Model ranges Page Your price is on its way Verification failed : ", CompareRangePage.modelPricelabel.getText().toLowerCase().contains(arg1.toLowerCase()));
 
 	}
+	
+	//Tc4
+	@When("^I click on the mazda logo$")
+	public void i_click_on_the_mazda_logo() throws Throwable {
+	 
+		HomePage HomePageLanding = PageFactory.initElements(driver, HomePage.class);
+		driver.manage().deleteAllCookies();
+		HomePageLanding.MazdaLogoImg.click();
+		boolean isDisplayed = waitForElementToBeDisplayed(HomePageLanding.locationPopUP, 3, driver);
+		//closing location popup
+				if (isDisplayed) {
+		//	waitAndClick(HomePageLanding.locationPopUPCloseButton, 1, driver, "Location popup close button");
+		}
+	}
+
+	@Then("^I navigates too Home page and request for cookie$")
+	public void i_navigates_too_Home_page_and_request_for_cookie() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    
+	}
+
+	@When("^I submit post code as \"(.*?)\"$")
+	public void i_submit_post_code_as(String arg1) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	   
+	}
+
+	@When("^retrieve postcode from cookie$")
+	public void retrieve_postcode_from_cookie() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	  
+	}
+
+	@Then("^I see input postcode is same as cookie saved$")
+	public void i_see_input_postcode_is_same_as_cookie_saved() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	   
+	}
+
 		
 
 }

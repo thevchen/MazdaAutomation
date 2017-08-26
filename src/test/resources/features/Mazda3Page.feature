@@ -30,4 +30,14 @@ Scenario: Mazda3 page UI tests Compare models
 	When I select models "Mazda2" and "Mazda3" to compare
 	When I click on the Compare Cars button
 	And  select any options from drop down
-	Then I see message "YOUR PRICE IS ON ITS WAY."
+	Then I see message "your price is on its way."
+	
+	
+@Test4	
+Scenario: Mazda3 page Cookie test
+    When I click on the mazda logo 
+	Then I navigates too Home page and request for cookie
+	When I submit post code as "3145"
+	And  retrieve postcode from cookie
+	Then I see input postcode is same as cookie saved
+	

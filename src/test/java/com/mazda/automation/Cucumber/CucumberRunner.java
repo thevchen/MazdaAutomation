@@ -20,7 +20,7 @@ import cucumber.api.CucumberOptions;
         "usage:target/report/cucumber-usage.json", "junit:target/report/cucumber-results.xml" }, features = { "src/test/resources/features/" }, 
         format = {"pretty", "json:target/report/cucumber.json", "html:target/report/html/" }, 
         glue = { "com.mazda.automation.StepDefs/" },
-        tags = {("@Test2")}
+        tags = {("@Test4")}
 )
 public class CucumberRunner {
 
