@@ -50,7 +50,7 @@ public abstract class BaseClass {
 	static DateFormat dateFormat = new SimpleDateFormat("ddMMMyyyy");
 	public static String newdate = dateFormat.format(date).toString();
 	public static String foldername = path + newdate;
-
+	
 	/**
 	 * @param BrowserType
 	 * @return

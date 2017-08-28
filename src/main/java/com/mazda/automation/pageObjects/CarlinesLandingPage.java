@@ -18,6 +18,8 @@ import com.mazda.automation.baseClass.BaseClass;
 
 
 public class CarlinesLandingPage extends BaseClass{
+	
+	String baseURLL = "https://www.mazda.com.au/";
 
 	//=======Listing elements interacted on this page==========================
 
@@ -94,6 +96,12 @@ public class CarlinesLandingPage extends BaseClass{
 	
 	@FindBy(xpath="//a[contains(.,'Compare our range')]")
 	public WebElement compareRangeButton;
+	
+	@FindBy(xpath="//a[contains(.,'Compare our range')]")
+	public WebElement TrimPureWhiteLeather;
+	
+	@FindBy(xpath="//div[contains(.,'Starting from $')]")
+	public WebElement TrimPricelabel;
 	
 
 	

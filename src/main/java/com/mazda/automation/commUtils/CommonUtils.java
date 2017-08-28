@@ -19,6 +19,8 @@ public class CommonUtils extends BaseClass{
 	
 	String baseURL = "https://www.mazda.com.au/";
 	
+	//String baseURL = "http://rookie.node.chepdev.com/pl/";
+	
 //	String browserName = "chrome";
 	
 	
@@ -47,6 +49,12 @@ public class CommonUtils extends BaseClass{
 			Assert.fail("Error on page. Check URL: " + driver.getCurrentUrl());
 		}
 		return driver;
+	}
+	
+	
+public String GetbaseURL() {
+		
+		return baseURL;
 	}
 
 }

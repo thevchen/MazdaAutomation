@@ -32,6 +32,13 @@ public class HomePage extends BaseClass{
 	public WebElement MazdaLogoImg;
 	
 	
+	@FindBy(xpath="//input[@placeholder='Enter your postcode']")
+	public WebElement locationPopUPPostCodeText;
+	
+	@FindBy(xpath="//submit[contains(.,'Submit')]")
+	public WebElement locationPopUPPostSubmitButton;
+	
+
 	
 	//=======Listing elements interacted on this page==========================
 	

@@ -1,10 +1,9 @@
 @tag
 Feature: Mazda 3 page feature
-	Background:
-	Given I am on "cars/mazda3" page
 
 @Test1	
 Scenario: Mazda3 page UI tests
+    Given I am on "cars/mazda3" page
    	Then Color radio buttons exists on the page
 	And Model image is present on the page
 	And Model body type exists on the page
@@ -32,12 +31,27 @@ Scenario: Mazda3 page UI tests Compare models
 	And  select any options from drop down
 	Then I see message "your price is on its way."
 	
+@Test3	
+Scenario: Verify Gallery Grid and Image Overlay
+    When I am on same page 
+	Then Gallery grid exists on the page
+	When I click on the any image
+	Then image overlay is dsplyed
+	Then I navigate back to Home page	
+	
 	
 @Test4	
 Scenario: Mazda3 page Cookie test
-    When I click on the mazda logo 
+    When I am at Home Page 
 	Then I navigates too Home page and request for cookie
 	When I submit post code as "3145"
 	And  retrieve postcode from cookie
-	Then I see input postcode is same as cookie saved
+	Then I see input postcode is same as "3145"
+
+@Test5	
+Scenario: Verify Price with reguler Expression
+    Given I am navigate back "cars/mazda3" page
+    When Select from trim "pure white leather"
+	Then I see the Price 	
+	
 	

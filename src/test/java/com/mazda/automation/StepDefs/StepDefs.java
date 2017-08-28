@@ -2,9 +2,11 @@ package com.mazda.automation.StepDefs;
 
 import java.io.IOException;
 import java.util.Map;
+import java.util.Set;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -35,7 +37,7 @@ public class StepDefs extends BaseClass {
 		this.scenario = scenario;
 	}
 
-	//@After()
+	@After()
 	public void afterScenario(Scenario scenario) throws IOException, InterruptedException {
 		if (scenario.isFailed()) {
 			try {
@@ -64,7 +66,7 @@ public class StepDefs extends BaseClass {
 		CommonUtils page = PageFactory.initElements(driver, CommonUtils.class);
 		
 		driver = page.launchBrowser(driver, arg1);
-		driver.manage().deleteAllCookies();
+		//driver.manage().deleteAllCookies();
 		//closing location popup
 		CarlinesLandingPage LandingPage = PageFactory.initElements(driver, CarlinesLandingPage.class);
 		boolean isDisplayed = waitForElementToBeDisplayed(LandingPage.locationPopUP, 3, driver);
@@ -219,12 +221,16 @@ public class StepDefs extends BaseClass {
 	@Then("^Model ranges Page loads$")
 	public void model_ranges_Page_loads() throws Throwable {
 	   	CompareOurRange CompareRangePage = PageFactory.initElements(driver, CompareOurRange.class);
-	    Assert.assertTrue("Model ranges Page is not loading properly : ", driver.getTitle().toLowerCase().contains("Compare Our Range".toLowerCase()));
+	    Assert.assertTrue("Model ranges Page is not loading properly : ", driver.getTitle().toLowerCase().contains("Mazda".toLowerCase()));
 	}
 
 	@When("^I select models \"(.*?)\" and \"(.*?)\" to compare$")
 	public void i_select_models_and_to_compare(String arg1, String arg2) throws Throwable {
 		CompareOurRange CompareRangePage = PageFactory.initElements(driver, CompareOurRange.class);
+		CommonUtils page = PageFactory.initElements(driver, CommonUtils.class);
+		// Using this to avoid react ID in model selection
+		//driver.navigate().to(page.GetbaseURL()+"compare/?cars="+arg1+","+arg2);
+		
 		Assert.assertTrue("Model range   "+arg1+"  Page is not loading properly : ", BaseClass.waitAndClick(CompareRangePage.compareOurRangeModelMazda2, 10, driver, arg1));
 		Assert.assertTrue("Model range   "+arg2+"  Page is not loading properly : ", BaseClass.waitAndClick(CompareRangePage.compareOurRangeModelMazda3, 10, driver, arg1));
 		
@@ -252,24 +258,67 @@ public class StepDefs extends BaseClass {
 	@Then("^I see message \"(.*?)\"$")
 	public void i_see_message(String arg1) throws Throwable {
 	  	CompareOurRange CompareRangePage = PageFactory.initElements(driver, CompareOurRange.class);
-	  	System.out.println(CompareRangePage.modelPricelabel.getText().toLowerCase());
 		Assert.assertTrue("Model ranges Page Your price is on its way Verification failed : ", CompareRangePage.modelPricelabel.getText().toLowerCase().contains(arg1.toLowerCase()));
 
 	}
 	
+	
+	// Tc3
+	
+	@When("^I am on same page$")
+	public void i_am_on_same_page() throws Throwable {
+	    // Do nothing
+	  
+	}
+
+	@Then("^Gallery grid exists on the page$")
+	public void gallery_grid_exists_on_the_page() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	 
+	}
+
+	@When("^I click on the any image$")
+	public void i_click_on_the_any_image() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    
+	}
+
+	@Then("^image overlay is dsplyed$")
+	public void image_overlay_is_dsplyed() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    
+	}
+
+	@Then("^I navigate back to Home page$")
+	public void i_navigate_back_to_Home_page() throws Throwable {
+	    HomePage HomePageLanding = PageFactory.initElements(driver, HomePage.class);
+	    driver.manage().deleteAllCookies();
+	    HomePageLanding.MazdaLogoImg.click();
+		CommonUtils page = PageFactory.initElements(driver, CommonUtils.class);
+		driver.manage().deleteAllCookies();
+		driver.close();
+		driver = page.launchBrowser(driver, "");
+		
+	}
+
+	
+		
 	//Tc4
-	@When("^I click on the mazda logo$")
-	public void i_click_on_the_mazda_logo() throws Throwable {
+	@When("^I am at Home Page$")
+	public void i_am_at_Home_Page() throws Throwable {
 	 
 		HomePage HomePageLanding = PageFactory.initElements(driver, HomePage.class);
-		driver.manage().deleteAllCookies();
-		HomePageLanding.MazdaLogoImg.click();
+		//CommonUtils page = PageFactory.initElements(driver, CommonUtils.class);
+		//driver.manage().deleteAllCookies();
+		//driver = page.launchBrowser(driver, "");
 		boolean isDisplayed = waitForElementToBeDisplayed(HomePageLanding.locationPopUP, 3, driver);
 		//closing location popup
 				if (isDisplayed) {
 		//	waitAndClick(HomePageLanding.locationPopUPCloseButton, 1, driver, "Location popup close button");
 		}
 	}
+	
+	
 
 	@Then("^I navigates too Home page and request for cookie$")
 	public void i_navigates_too_Home_page_and_request_for_cookie() throws Throwable {
@@ -280,19 +329,49 @@ public class StepDefs extends BaseClass {
 	@When("^I submit post code as \"(.*?)\"$")
 	public void i_submit_post_code_as(String arg1) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
+		HomePage HomePageLanding = PageFactory.initElements(driver, HomePage.class);
+		HomePageLanding.locationPopUPPostCodeText.sendKeys(arg1);
+		Assert.assertTrue("Home page Location PopUp Submit button is not working properly : ", BaseClass.waitAndClick(HomePageLanding.locationPopUPPostSubmitButton, 10, driver, "Submit Button"));
 	   
 	}
 
 	@When("^retrieve postcode from cookie$")
 	public void retrieve_postcode_from_cookie() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	  
+	    // Get Cookie value from Browser
+	    Cookie t = driver.manage().getCookieNamed("postcode");
+	    if(t!=null){
+	    String s1 = t.getValue();
+	    System.out.println("The Cookie value is : " + s1);
+	               }
+		
 	}
 
-	@Then("^I see input postcode is same as cookie saved$")
-	public void i_see_input_postcode_is_same_as_cookie_saved() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	   
+	@Then("^I see input postcode is same as \"(.*?)\"$")
+	public void i_see_input_postcode_is_same_as(String arg1) throws Throwable {
+		Assert.assertTrue("Home page stored postcode Cookie Verification failed : ", driver.manage().getCookieNamed("postcode").getValue().equalsIgnoreCase(arg1));
+	  
+	}
+	
+	
+	//TC5
+	
+	@Given("^I am navigate back \"(.*?)\" page$")
+	public void i_am_navigate_back_page(String arg1) throws Throwable {
+	 	CommonUtils page = PageFactory.initElements(driver, CommonUtils.class);
+		driver.navigate().to(page.GetbaseURL()+arg1);
+	}
+
+	@When("^Select from trim \"(.*?)\"$")
+	public void select_from_trim(String arg1) throws Throwable {
+		CarlinesLandingPage LandingPage = PageFactory.initElements(driver, CarlinesLandingPage.class);
+		LandingPage.TrimPureWhiteLeather.click();
+		
+	}
+
+	@Then("^I see the Price$")
+	public void i_see_the_Price() throws Throwable {
+		CarlinesLandingPage LandingPage = PageFactory.initElements(driver, CarlinesLandingPage.class);
+		System.out.println("Trim Price is displayed"+LandingPage.TrimPricelabel.isDisplayed());
 	}
 
 		

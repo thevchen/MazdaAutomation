@@ -27,8 +27,7 @@ public class CompareOurRange extends BaseClass{
 	
 	@FindBy(xpath="//img[@data-reactid='20']")
 	public WebElement compareOurRangeModelMazda2;
-	
-	
+		
 	@FindBy(xpath="//img[@data-reactid='28']")
 	public WebElement compareOurRangeModelMazda3;
 	
@@ -53,20 +52,21 @@ public class CompareOurRange extends BaseClass{
 	
 	//No need of this method
 //	// Method to check colour radio buttons
-//	public boolean verifyColourRadioButtons ()
-//	{
-//		try{
-//			// need to write code to check Colour radio buttons exists
-//			
-//			return true;
-//		}
-//		catch (Exception e)
-//		{
-//			System.out.println("!!!!Unable to find !!!!");
-//			e.printStackTrace();
-//			return false;
-//		}
-//	}
+	/*public boolean navigateURLs (String subURL)
+	{
+		try{
+			// need to write code to check Colour radio buttons exists
+			
 		
+			return true;
+		}
+		catch (Exception e)
+		{
+			System.out.println("!!!!Unable to find !!!!");
+			e.printStackTrace();
+			return false;
+		}
+	}
+		*/
 
 }
