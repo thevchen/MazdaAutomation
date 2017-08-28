@@ -268,25 +268,28 @@ public class StepDefs extends BaseClass {
 	@When("^I am on same page$")
 	public void i_am_on_same_page() throws Throwable {
 	    // Do nothing
+		CompareOurRange CompareRangePage = PageFactory.initElements(driver, CompareOurRange.class);
+		Assert.assertTrue("Model Grade Selection Compare Range Page model Restart Button is not loading properly : ", BaseClass.waitAndClick(CompareRangePage.modelRestart, 10, driver, "Compare Range Page model Restart Button"));
 	  
 	}
 
 	@Then("^Gallery grid exists on the page$")
-	public void gallery_grid_exists_on_the_page() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	 
+	public void CompareRangePage() throws Throwable {
+		CompareOurRange CompareRangePage = PageFactory.initElements(driver, CompareOurRange.class);
+		Assert.assertTrue("Model Ranges Page models Grid images are not loading properly : ", CompareRangePage.GalleryGridTxt.isDisplayed());
 	}
 
 	@When("^I click on the any image$")
 	public void i_click_on_the_any_image() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-	    
+	    //Need to used ID
+		CompareOurRange CompareRangePage = PageFactory.initElements(driver, CompareOurRange.class);
 	}
 
 	@Then("^image overlay is dsplyed$")
 	public void image_overlay_is_dsplyed() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-	    
+		CompareOurRange CompareRangePage = PageFactory.initElements(driver, CompareOurRange.class);
 	}
 
 	@Then("^I navigate back to Home page$")
@@ -364,7 +367,7 @@ public class StepDefs extends BaseClass {
 	@When("^Select from trim \"(.*?)\"$")
 	public void select_from_trim(String arg1) throws Throwable {
 		CarlinesLandingPage LandingPage = PageFactory.initElements(driver, CarlinesLandingPage.class);
-		LandingPage.TrimPureWhiteLeather.click();
+		Assert.assertTrue("Model mazda 3 page Trim :"+arg1+" is not loading properly : ", BaseClass.waitAndClick(LandingPage.TrimPureWhiteLeather, 10, driver, arg1));
 		
 	}
 

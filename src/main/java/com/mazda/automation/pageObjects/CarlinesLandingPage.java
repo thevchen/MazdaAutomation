@@ -97,7 +97,7 @@ public class CarlinesLandingPage extends BaseClass{
 	@FindBy(xpath="//a[contains(.,'Compare our range')]")
 	public WebElement compareRangeButton;
 	
-	@FindBy(xpath="//a[contains(.,'Compare our range')]")
+	@FindBy(xpath="//label[contains(.,'Pure White Leather')]//div[(@data-test='swatch-icon')]")
 	public WebElement TrimPureWhiteLeather;
 	
 	@FindBy(xpath="//div[contains(.,'Starting from $')]")

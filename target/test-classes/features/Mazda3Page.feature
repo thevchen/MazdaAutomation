@@ -50,7 +50,7 @@ Scenario: Mazda3 page Cookie test
 
 @Test5	
 Scenario: Verify Price with reguler Expression
-    Given I am navigate back "cars/mazda3" page
+    Given I am navigate back "cars/mazda3#design" page
     When Select from trim "pure white leather"
 	Then I see the Price 	
 	

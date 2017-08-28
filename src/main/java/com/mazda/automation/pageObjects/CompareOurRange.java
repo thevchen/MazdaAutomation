@@ -27,10 +27,12 @@ public class CompareOurRange extends BaseClass{
 	
 	@FindBy(xpath="//img[@data-reactid='20']")
 	public WebElement compareOurRangeModelMazda2;
-		
+	
+	
 	@FindBy(xpath="//img[@data-reactid='28']")
 	public WebElement compareOurRangeModelMazda3;
 	
+		
 	@FindBy(xpath="//a[contains(.,'Compare Cars')]")
 	public WebElement compareCarButton;
 	
@@ -43,7 +45,13 @@ public class CompareOurRange extends BaseClass{
 	@FindBy(xpath="//div[contains(.,'Your price is on its way.')]")
 	public WebElement modelPricelabel;
 	
+	@FindBy(xpath="//a[contains(.,'Restart')]")
+	public WebElement modelRestart;
 	
+	@FindBy(xpath="//p[contains(.,'Find the right Mazda for you')]")
+	public WebElement GalleryGridTxt;
+	
+;
 	
 	
 	//img[contains(@alt,'Mazda2')]
